@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            background-color: orange;
+            margin: auto;
+
+        }
+        #result {
+            width: 180px;
+        }
+        .btn {
+            width: 34px;
+            height: 32px;
+        }
+        #equ {
+            width: 34px;
+            height: 66px;
+        }
+        #zero{
+            width: 72px;
+            height: 32px;
+        }
+    </style>
+<body>
+<table>
+    <tr>
+        <td colspan="5"><input id="hienthi" type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="button" class="btn" value="7" onclick="set_num(this.value)" ></td>
+        <td><input type="button" class="btn" value="8" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="9" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="/" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="C" onclick="giam1()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" class="btn" value="4" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="5" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="6" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="*" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="AC"onclick="xoa()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" class="btn" value="1" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="2" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="3" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="+" onclick="set_num(this.value)"></td>
+        <td rowspan="2"  ><input type="button" id="equ" class="btn" value="="onclick="ketqua()"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="button" id="zero" class="btn" value="0" onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="." onclick="set_num(this.value)"></td>
+        <td><input type="button" class="btn" value="-" onclick="set_num(this.value)"></td>
+    </tr>
+
+</table>
+<script>
+    let x = "";
+    function f(id) {
+        return document.getElementById(id);
+    }
+    function set_num(num) {
+        x+= num;
+        f("hienthi").value = x
+    }
+    function ketqua() {
+        f("hienthi").value = eval(f("hienthi").value);
+        x = f("hienthi").value;
+    }
+    function xoa() {
+        x= "";
+        f("hienthi").value = x ;
+    }function giam1() {
+        f("hienthi").value = f("hienthi").value.substr(0,f("hienthi").value.length-1);
+        x= f("hienthi").value
+    }
+
+
+</script>
+</body>
+</html>
