@@ -35,14 +35,14 @@
                 <option value="vnd">VietNam</option>
                 <option value="usd">Mỹ</option>
             </select></td>
-            <td><button type="button" value="Convert" onclick="Change()">ConVert</button> </td>
+            <td><button type="button" value="Convert" onclick="change()">ConVert</button> </td>
         </tr>
 
     </table>
     <p id="ketQua"></p>
 </form>
 <script>
-    function Change() {
+    function change() {
         let money = document.getElementById("money").value;
         let from = document.getElementById("from").value;
         let to = document.getElementById("to").value;
