@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<p>Celsius <input type="number" id="input1" oninput="inputCelsius()"></p>
 <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
 <p>Kenvin: <span id="outputKenvin"></span></p>
 <script>
@@ -12,6 +13,7 @@
         constructor(celsius) {
             this.celsius = Math.max(celsius, -273);
         };
+
         changeCtoF(){
             return (9/5) * this.celsius + 32 ;
         };
@@ -19,10 +21,13 @@
             return this.celsius + 273 ;
         };
     }
-    let c = parseFloat(prompt("input celsius"));
-    let converter = new Temperature(c);
-    document.getElementById("outputFahrenheit").innerHTML = converter.changeCtoF();
-    document.getElementById("outputKenvin").innerHTML = converter.changeCtoK();
+    function inputCelsius(){
+        let value = parseInt(document.getElementById("input1").value);
+        let converter = new Temperature(value);
+        document.getElementById("outputFahrenheit").innerHTML = converter.changeCtoF();
+        document.getElementById("outputKenvin").innerHTML = converter.changeCtoK();
+    }
+
 
 </script>
 </body>
