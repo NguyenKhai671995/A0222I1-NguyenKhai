@@ -37,6 +37,7 @@ public class Delete {
         Scanner scanner = new Scanner(System.in);
         System.out.print("value you want delete: ");
         int value = scanner.nextInt();
-        System.out.printf("New array: %s", Arrays.toString(deleteValue(numbers, value)));
+        numbers = deleteValue(numbers,value);
+        System.out.printf("New array: %s", Arrays.toString(numbers));
     }
 }
