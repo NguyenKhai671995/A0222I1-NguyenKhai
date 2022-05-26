@@ -7,12 +7,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Fan fan1 = new Fan();
         Fan fan2 = new Fan();
-        fan1.setSpeed(3);
+        fan1.setSpeedFast();
         fan1.setRadius(10);
         fan1.setColor("Yellow");
         fan1.setOff(false);
 
-        fan2.setSpeed(2);
+        fan2.setSpeedMedium();
         fan2.setRadius(5);
         fan2.setColor("blue");
         fan2.setOff(true);

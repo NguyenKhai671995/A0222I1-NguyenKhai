@@ -8,6 +8,7 @@ public class Fan {
     private boolean off = false ;
     private double radius = 5 ;
     private String color = "blue";
+
     public int getSLOW() {
         return SLOW;
     }
@@ -26,6 +27,14 @@ public class Fan {
 
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    public void setSpeedMedium(){
+        this.speed = MEDIUM;
+    }
+
+    public void setSpeedFast(){
+        this.speed = FAST;
     }
 
     public boolean isOff() {
