@@ -3,38 +3,62 @@ package ss2_loop.bai_tap;
 import java.util.Scanner;
 
 public class DrawMenu {
-    public static String drawRectangle(int width, int height){
+    public static String drawRectangle(int width, int height) {
         String result = "";
-        for (int i = 0 ; i < height; i++){
-            for (int j = 0 ; j < width ; j++){
+        for (int i = 1; i <= height; i++) {
+            if (i == 1 || i == height) {
+                for (int j = 1; j <= width; j++) {
+                    result += " * ";
+                }
+            } else {
+                for (int j = 1; j <= width; j++) {
+                    if (j == 1 || j == width) {
+                        result += " * ";
+                    } else {
+                        result += "   ";
+                    }
+                }
+            }
+            result += "\n";
+        }
+        return result;
+    }
+
+    public static String drawTriangle(int height) {
+        String result = "";
+         for (int i = 1; i <= height; i++) {
+            if (i == height) {
+                for (int k = 1; k <= height; k++) {
+                    result += " * ";
+                }
+            } else {
+                for (int j = 1; j <= i; j++) {
+                    if (j == 1 || j == i) {
+                        result += " * ";
+                    } else {
+                        result += "   ";
+                    }
+                }
+                result += "\n";
+            }
+        }
+        return result;
+    }
+
+    public static String drawIsoscelesTriangle(int height) {
+        String result = "";
+        for (int i = height; i >= 1; i--) {
+            for (int j = 0; j < i; j++) {
                 result += " * ";
             }
             result += "\n";
         }
         return result;
     }
-    public static String drawTriangle (int height){
-        String result = "";
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j <= i ; j++) {
-                result += " * ";
-            }
-            result += "\n";
-        }
-        return result ;
-    }
-    public static String drawIsoscelesTriangle (int height){
-        String result = "";
-        for (int i = height; i >= 1; i--){
-            for ( int j = 0 ; j < i ; j++){
-                result += " * ";
-            }
-            result += "\n";
-        }
-        return result;
-    }
+
     public static void main(String[] args) {
-        loop: while (true){
+        loop:
+        while (true) {
             System.out.println("1.Print the rectangle");
             System.out.println("2.Print the square triangle");
             System.out.println("3.Print isosceles triangle");
@@ -70,3 +94,4 @@ public class DrawMenu {
         }
     }
 }
+

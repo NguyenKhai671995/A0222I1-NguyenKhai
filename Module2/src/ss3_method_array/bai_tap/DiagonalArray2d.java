@@ -28,6 +28,6 @@ public class DiagonalArray2d {
                }
             }
         }
-        System.out.printf("Array2d \n%shave diagonal left to right %d\ndiagonal right to left %d",displayArray2d(numbers),result,ans);
+        System.out.printf("Array2d \n%s have diagonal left to right %d\ndiagonal right to left %d",displayArray2d(numbers),result,ans);
     }
 }
