@@ -9,16 +9,44 @@ public class MoveablePoint extends Point{
     public MoveablePoint() {
     }
 
-    public MoveablePoint(float x, float y, float xSpeed, float ySpeed, float x1, float y1) {
+    public MoveablePoint(float x, float y, float xSpeed, float ySpeed) {
         super(x, y);
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
-        this.x = x1;
-        this.y = y1;
     }
 
     public MoveablePoint(float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
+    }
+
+    public float getxSpeed() {
+        return xSpeed;
+    }
+
+    public void setxSpeed(float xSpeed) {
+        this.xSpeed = xSpeed;
+    }
+
+    public float getySpeed() {
+        return ySpeed;
+    }
+
+    public void setySpeed(float ySpeed) {
+        this.ySpeed = ySpeed;
+    }
+
+    public float[] getSpeed() {
+        return new float[]{xSpeed, ySpeed};
+    }
+
+    public void toStrings(){
+        System.out.printf("MoveablePoint x,y: %.2f , %.2f,\n speed: xSpeed %.2f, ySpeed %.2f \n",getX(),getY(),getxSpeed(),getySpeed());
+    }
+
+    public MoveablePoint move(){
+        x+=xSpeed;
+        y+=ySpeed;
+        return this;
     }
 }

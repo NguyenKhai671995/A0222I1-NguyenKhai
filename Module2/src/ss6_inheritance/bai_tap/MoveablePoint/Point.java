@@ -31,4 +31,7 @@ public class Point {
     public float[] getXY() {
         return new float[]{getX(),getY()};
     }
+    public void toStrings(){
+        System.out.printf("point x,y: %s , %s\n",getX(),getY());
+    }
 }
