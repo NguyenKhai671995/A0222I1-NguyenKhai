@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="" />
+    <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss13_search/bai_tap/StringAscending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss13_search/bai_tap/optional_binarysearch/Recursive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss13_search/bai_tap/optional_max_string_ascesnding/MaxStringAscending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss14_sort/SortInsert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +43,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module1" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\cody\A0222I1-NguyenKhai\Module1" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -31,10 +62,32 @@
       <option name="presentableId" value="Default" />
       <updated>1654350863046</updated>
       <workItem from="1654350867761" duration="18000" />
+      <workItem from="1655899787689" duration="1698000" />
+      <workItem from="1656067443414" duration="104000" />
+      <workItem from="1656079540489" duration="295000" />
+      <workItem from="1656327256258" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1656067547760">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1656067547760" />
   </component>
 </project>
