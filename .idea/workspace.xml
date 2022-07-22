@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module2/src/ss13_search/bai_tap/StringAscending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/ss13_search/bai_tap/optional_binarysearch/Recursive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/ss13_search/bai_tap/optional_max_string_ascesnding/MaxStringAscending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/ss14_sort/SortInsert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +60,7 @@
       <workItem from="1656067443414" duration="104000" />
       <workItem from="1656079540489" duration="295000" />
       <workItem from="1656327256258" duration="7000" />
+      <workItem from="1656853288555" duration="4000" />
     </task>
     <servers />
   </component>
