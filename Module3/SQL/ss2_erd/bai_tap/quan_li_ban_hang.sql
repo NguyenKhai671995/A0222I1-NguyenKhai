@@ -22,10 +22,11 @@ p_name varchar(50),
 p_price varchar(50)
 );
 
+
 create table order_detail(
-od_qty int,
 o_id int,
 p_id int,
+od_qty int,
 foreign key (o_id) references orders(o_id),
 foreign key (p_id) references product(p_id)	
 );
