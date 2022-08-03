@@ -178,18 +178,17 @@ SELECT
     SUM(so_luong)
 FROM
     hop_dong
-        INNER JOIN
-    hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
-        INNER JOIN
-    khach_hang ON hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
-        INNER JOIN
-    nhan_vien ON hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
-        INNER JOIN
-    dich_vu ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
-        AND ((MONTH(ngay_lam_hop_dong) BETWEEN 10 AND 12)
-        AND (YEAR(ngay_lam_hop_dong) = 2020))
-        AND ngay_lam_hop_dong NOT IN ((MONTH(ngay_lam_hop_dong) BETWEEN 1 AND 6)
-        AND (YEAR(ngay_lam_hop_dong) = 2021));
+    left join nhan_vien on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
+    left join dich_vu on hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
+    left join khach_hang on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
+    left join hop_dong_chi_tiet on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+    left join dich_vu_di_kem on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+       where  (ngay_lam_hop_dong BETWEEN '2020-10-01'and '2020-12-30')
+        and (ngay_lam_hop_dong NOT BETWEEN '2021-01-01'
+        and '2021-06-30'
+    )
+    GROUP by ma_hop_dong
+    ;
 use furama;
 
 -- cau 13:
