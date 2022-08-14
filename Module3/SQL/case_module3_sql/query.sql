@@ -183,10 +183,8 @@ FROM
     left join khach_hang on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
     left join hop_dong_chi_tiet on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
     left join dich_vu_di_kem on hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
-       where  (ngay_lam_hop_dong BETWEEN '2020-10-01'and '2020-12-30')
-        and (ngay_lam_hop_dong NOT BETWEEN '2021-01-01'
-        and '2021-06-30'
-    )
+       where (ngay_lam_hop_dong BETWEEN '2020-10-01'and '2020-12-30')
+        and (ngay_lam_hop_dong NOT BETWEEN '2021-01-01' and '2021-06-30')
     GROUP by ma_hop_dong
     ;
 use furama;
@@ -263,7 +261,6 @@ where nhan_vien.ma_nhan_vien in (select nhan_vien.ma_nhan_vien from nhan_vien
 join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
 and year(ngay_lam_hop_dong) between 2019 and 2021 );
 
-drop trigger delete_fk;
 -- cau 17
 use furama;
 UPDATE
