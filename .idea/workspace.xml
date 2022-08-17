@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module3/CSS/ss6/bai_tap/truyentranh/css/truyentranh.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/CSS/ss6/bai_tap/truyentranh/html/ReadStory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/CSS/ss6/bai_tap/truyentranh/img/truyen1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/CSS/ss6/bai_tap/truyentranh/img/truyen2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/CSS/ss6/bai_tap/truyentranh/img/truyen3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/CSS/ss6/bai_tap/truyentranh/img/truyen4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/SQL/case_module3_sql/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/SQL/case_module3_sql/query.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/SQL/case_module3_sql/query21_28.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/SQL/case_module3_sql/query21_28.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,21 +49,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module3/CSS/ss8" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\cody\A0222I1-NguyenKhai\Module3" />
-      <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss6\bai_tap" />
-      <recent name="D:\cody\A0222I1-NguyenKhai\Module1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss7\anime\html" />
       <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss7\layout_rwd\css" />
       <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss6\bai_tap\truyentranh\html" />
       <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss6\bai_tap\truyentranh\img" />
       <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss6\bai_tap\truyentranh\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss8" />
+      <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss8\bootrap_demo" />
+      <recent name="D:\cody\A0222I1-NguyenKhai\Module3" />
+      <recent name="D:\cody\A0222I1-NguyenKhai\Module3\CSS\ss6\bai_tap" />
+      <recent name="D:\cody\A0222I1-NguyenKhai\Module1" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -93,7 +87,10 @@
       <workItem from="1659957974396" duration="5838000" />
       <workItem from="1660129448121" duration="6504000" />
       <workItem from="1660301581154" duration="7317000" />
-      <workItem from="1660476969701" duration="9086000" />
+      <workItem from="1660476969701" duration="9773000" />
+      <workItem from="1660487571387" duration="27000" />
+      <workItem from="1660560642016" duration="2237000" />
+      <workItem from="1660563351998" duration="525000" />
     </task>
     <servers />
   </component>
@@ -113,6 +110,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1660486156871">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1660486156871" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1656067547760">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
