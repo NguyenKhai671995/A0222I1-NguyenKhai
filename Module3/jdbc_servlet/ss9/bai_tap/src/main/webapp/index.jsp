@@ -21,9 +21,9 @@
     <p>Discount Percent</p>
     <input type="text" placeholder="Discount Percent" name="discount">
     <button type="submit">Calculate Discount</button>
-<%--    <c:if test="${requestScope.message != null}">--%>
-<%--        <p><c:out value="${requestScope.message}">${requestScope.message}</c:out></p>--%>
-<%--    </c:if>--%>
+    <c:if test="${requestScope.message != null}">
+        <p><c:out value="${requestScope.message}">${requestScope.message}</c:out></p>
+    </c:if>
 </form>
 </body>
 </html>
