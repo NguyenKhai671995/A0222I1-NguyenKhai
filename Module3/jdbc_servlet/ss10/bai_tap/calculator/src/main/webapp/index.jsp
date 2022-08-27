@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>$Title$</title>
@@ -22,22 +24,29 @@
         <tr>
             <th>Operator</th>
             <td>
-                <select>
-                <option>Add</option>
-                <option>multiplication</option>
-                <option>division</option>
+                <select name="calculator">
+                    <option value="add">Add</option>
+                    <option value="sub">sub</option>
+                    <option value="multi">multiplication</option>
+                    <option value="division">division</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <th>Second operator: </th>
+            <th>Second operator:</th>
             <td><input type="number" name="second"></td>
         </tr>
         <tr>
             <th></th>
-            <th><button type="submit">Calculate</button></th>
+            <th>
+                <button type="submit">Calculate</button>
+            </th>
         </tr>
     </table>
 </form>
+<c:if test="${message != null}">
+    <p><c:out value="${message}">${message}</c:out></p>
+</c:if>
+
 </body>
 </html>
