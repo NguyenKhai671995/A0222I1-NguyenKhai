@@ -58,15 +58,15 @@ public class UsersReponsitory implements IUsersRepository {
     @Override
     public User findById(int id) {
         try (Connection connection = BaseRepository.getConnectDB();
-             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_ID)){
+             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_ID)) {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                int id_find = resultSet.getInt("id");
+            while (resultSet.next()) {
+
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
-                return new User(id_find,name,email,country);
+                return new User(id, name, email, country);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -80,7 +80,6 @@ public class UsersReponsitory implements IUsersRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BY_ID);
             preparedStatement.setInt(1, id);
-
             int num = preparedStatement.executeUpdate();
             return (num == 1);
         } catch (SQLException throwables) {
@@ -95,8 +94,8 @@ public class UsersReponsitory implements IUsersRepository {
 //        findById(user.getId()).setEmail(user.getEmail());
 //        findById(user.getId()).setCountry(user.getCountry());
 //        return true;
-        try(Connection connection = BaseRepository.getConnectDB();
-            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE)) {
+        try (Connection connection = BaseRepository.getConnectDB();
+             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE)) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
@@ -133,10 +132,10 @@ public class UsersReponsitory implements IUsersRepository {
     public List<User> findByCountry(String country) {
         List<User> userList = new ArrayList<>();
         try (Connection connection = BaseRepository.getConnectDB();
-             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY)){
+             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_BY_COUNTRY)) {
             preparedStatement.setString(1, country);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");

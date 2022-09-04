@@ -63,27 +63,27 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private void save(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String country = request.getParameter("country");
-        User user = new User(name, email, country);
-        Map<String, String> map = usersService.add(user);
-        String mess = "Add New successfully";
-        if (!map.isEmpty()) {
-            mess = "Them moi khong thanh cong";
-            request.setAttribute("error", map);
+        private void save(HttpServletRequest request, HttpServletResponse response) {
+            String name = request.getParameter("name");
+            String email = request.getParameter("email");
+            String country = request.getParameter("country");
+            User user = new User(name, email, country);
+            Map<String, String> map = usersService.add(user);
+            String mess = "Add New successfully";
+            if (!map.isEmpty()) {
+                mess = "Them moi khong thanh cong";
+                request.setAttribute("error", map);
+            }
+            request.setAttribute("mess", mess);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("User/create.jsp");
+            try {
+                requestDispatcher.forward(request, response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        request.setAttribute("mess", mess);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("User/create.jsp");
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

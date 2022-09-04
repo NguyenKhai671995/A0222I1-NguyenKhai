@@ -10,7 +10,6 @@ public interface IUsersRepository {
 
     List<User> findAll();
 
-
     User findById(int id);
 
     boolean delete(int id);

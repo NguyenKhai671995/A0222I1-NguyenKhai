@@ -18,7 +18,7 @@ public class UsersService implements IUsersService {
         if (map.isEmpty()) {
             usersRepository.add(user);
         }
-return map;
+        return map;
     }
 
     @Override

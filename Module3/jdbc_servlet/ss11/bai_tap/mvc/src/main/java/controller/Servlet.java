@@ -28,7 +28,7 @@ public class Servlet extends HttpServlet {
                 break;
             }
             case "create": {
-                createProductFromPostMethod(request, response);
+                createNewProduct(request, response);
                 break;
             }
 
@@ -36,7 +36,7 @@ public class Servlet extends HttpServlet {
     }
 
 
-    private void createProductFromPostMethod(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void createNewProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String message;
         Product product = createProduct(request, response);
         Map<String, String> map = productService.save(product);
@@ -90,7 +90,7 @@ public class Servlet extends HttpServlet {
                 break;
             }
             case "create": {
-                createNew(request, response);
+                createForm(request, response);
                 break;
             }
             case "search": {
@@ -123,7 +123,7 @@ public class Servlet extends HttpServlet {
         display(request, response);
     }
 
-    private void createNew(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void createForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Product product = new Product();
         request.setAttribute("product", product);
         request.setAttribute("link", "create");
