@@ -10,11 +10,15 @@ create table users (
 );
 
 insert into users(`name`, email, country) values('Minh','minh@codegym.vn','Viet Nam');
-insert into users(`name`, email, country) values('Kante','kante@che.uk','Kenia');
+insert into users(`name`, email, country) values('Kante','kante@che.uk','japan');
+insert into users(`name`, email, country) values('khai','khai@codegym.vn','Viet Nam');
+insert into users(`name`, email, country) values('tuan','tuan@che.uk','korea');
 
 select * from users;
 
 select * from users where id = 1;
+
+select * from users where country = ?;
 
 update users set `name` = ?, email = ? , country = ? where id = ?;
 
