@@ -4,7 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Timestamp;
+import java.sql.Date;
+
 
 @Entity(name = "blog")
 public class Blog {
@@ -13,12 +14,13 @@ public class Blog {
     private Integer id;
     private String title;
     private String content;
-    private Timestamp date;
+    private Date date;
+
 
     public Blog() {
     }
 
-    public Blog(Integer id, String title, String content, Timestamp date) {
+    public Blog(Integer id, String title, String content, Date date) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -49,11 +51,11 @@ public class Blog {
         this.content = content;
     }
 
-    public Timestamp getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 }
