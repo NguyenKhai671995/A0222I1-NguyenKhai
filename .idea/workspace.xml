@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e83681ba-484c-414e-a6d0-ec4fbf2be825" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module3/CSS/ss8" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/A Quay/A Quay" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -91,6 +89,7 @@
       <workItem from="1660487571387" duration="27000" />
       <workItem from="1660560642016" duration="2237000" />
       <workItem from="1660563351998" duration="525000" />
+      <workItem from="1666620754888" duration="167000" />
     </task>
     <servers />
   </component>
@@ -114,10 +113,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1660486156871" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1656067547760">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1666620777272">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1656067547760" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1666620777272" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1659959059277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

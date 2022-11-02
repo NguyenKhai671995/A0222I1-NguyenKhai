@@ -1,0 +1,17 @@
+package com.codegym.case_study.service.employee;
+
+
+import com.codegym.case_study.model.employee.Employee;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+public interface IEmployeeService {
+    Page<Employee> findAllByName(String name, Pageable pageable);
+
+    Employee findById(Long id);
+
+    void save(Employee employee);
+
+    void updateStatusById(Long id);
+
+}
