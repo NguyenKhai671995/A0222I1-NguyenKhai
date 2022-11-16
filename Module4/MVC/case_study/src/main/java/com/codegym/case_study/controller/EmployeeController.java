@@ -1,12 +1,11 @@
 package com.codegym.case_study.controller;
 
-import com.codegym.case_study.model.customer.Customer;
 import com.codegym.case_study.model.employee.Division;
 import com.codegym.case_study.model.employee.EducationDegree;
 import com.codegym.case_study.model.employee.Employee;
 import com.codegym.case_study.model.employee.Position;
 import com.codegym.case_study.service.employee.IEmployeeService;
-import com.codegym.case_study.service.employee.ITypeService;
+import com.codegym.case_study.service.ITypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

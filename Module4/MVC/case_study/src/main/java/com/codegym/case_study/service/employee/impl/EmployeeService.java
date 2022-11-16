@@ -1,6 +1,6 @@
 package com.codegym.case_study.service.employee.impl;
 
-import com.codegym.case_study.model.customer.Customer;
+
 import com.codegym.case_study.model.employee.Employee;
 import com.codegym.case_study.repository.employee.IEmployeeRepository;
 import com.codegym.case_study.service.employee.IEmployeeService;
@@ -22,8 +22,8 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public Employee findById(Long id) {
-        Optional<Employee> customer = employeeRepository.findById(id);
-        return customer.orElse(null);
+        Optional<Employee> employee = employeeRepository.findById(id);
+        return employee.orElse(null);
     }
 
     @Override

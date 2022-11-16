@@ -19,15 +19,18 @@
 <body>
 <p style="color: red" th:text="${message}">
 </p>
-<form method="get" action="/">
+<form method="get" action="/customer/">
     <input type="text" name="name" placeholder="input name search">
     <button type="submit">Search</button>
 </form>
-<form method="get" action="/">
+<form method="get" action="/customer">
     <button type="submit">Refresh</button>
 </form>
-<form method="get" action="/create">
+<form method="get" action="/customer/create">
     <button type="submit">Create</button>
+</form>
+<form method="get" action="/">
+    <button type="submit">Home</button>
 </form>
 
 <table>
@@ -57,7 +60,7 @@
         <td th:text="${item.address}"></td>
         <td th:text="${item.customerType.name}"></td>
         <td>
-            <a style="text-decoration: none" th:href="@{/edit/{id}(id = ${item.id})}">
+            <a style="text-decoration: none" th:href="@{/customer/edit/{id}(id = ${item.id})}">
                 <button>Edit</button>
             </a>
 <!--            <a th:href="@{/delete/{id}(id = ${item.id})}"  style="text-decoration: none">-->
@@ -105,7 +108,7 @@
 <!--modal delete-->
 <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="/delete" method="post">
+        <form action="/customer/delete" method="post">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Delete Modal</h5>

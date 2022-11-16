@@ -45,7 +45,7 @@ public class CustomerController {
     }
 
     @PostMapping("/update")
-    public String updateDB(@Valid @ModelAttribute("product") Customer customer, BindingResult result, RedirectAttributes redirectAttributes, Model model) {
+    public String updateDB(@Valid @ModelAttribute("customer") Customer customer, BindingResult result, RedirectAttributes redirectAttributes, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("list", customerTypeService.findAll());
             return "/customer/update";

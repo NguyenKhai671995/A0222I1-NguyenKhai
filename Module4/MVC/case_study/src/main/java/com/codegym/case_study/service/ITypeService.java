@@ -1,4 +1,4 @@
-package com.codegym.case_study.service.employee;
+package com.codegym.case_study.service;
 
 import java.util.List;
 

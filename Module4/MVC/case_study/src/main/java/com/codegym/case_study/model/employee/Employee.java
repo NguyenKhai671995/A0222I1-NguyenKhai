@@ -1,12 +1,13 @@
 package com.codegym.case_study.model.employee;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Date;
-
+@AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
@@ -45,4 +46,8 @@ public class Employee {
 
     @Column(name = "employee_status")
     private Boolean status;
+
+    public Employee(Long id){
+        this.id = id;
+    }
 }

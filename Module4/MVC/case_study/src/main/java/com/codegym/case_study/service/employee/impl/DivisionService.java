@@ -2,7 +2,7 @@ package com.codegym.case_study.service.employee.impl;
 
 import com.codegym.case_study.model.employee.Division;
 import com.codegym.case_study.repository.employee.IDivisionRepository;
-import com.codegym.case_study.service.employee.ITypeService;
+import com.codegym.case_study.service.ITypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

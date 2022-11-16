@@ -3,7 +3,7 @@ package com.codegym.case_study.service.employee.impl;
 
 import com.codegym.case_study.model.employee.EducationDegree;
 import com.codegym.case_study.repository.employee.IEducationDegreeRepository;
-import com.codegym.case_study.service.employee.ITypeService;
+import com.codegym.case_study.service.ITypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
