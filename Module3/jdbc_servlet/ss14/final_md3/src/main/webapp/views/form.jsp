@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-1 col-lg-1">
+    <div class="col-md-1 col-lg-1" hidden>
 
     </div>
     <div class="col-md-10 col-lg-10">
@@ -145,7 +145,7 @@
             </div>
         </section>
     </div>
-    <div class="col-md-1 col-lg-1">
+    <div class="col-md-1 col-lg-1" hidden>
 
     </div>
 </div>

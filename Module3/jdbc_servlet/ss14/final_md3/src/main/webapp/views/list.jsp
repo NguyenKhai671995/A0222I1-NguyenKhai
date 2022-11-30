@@ -35,7 +35,6 @@
 </div>
 <div class="row">
     <div class="col-md-1 col-lg-1">
-
     </div>
     <div class="col-md-10 col-lg-10">
         <table class="table table-striped table-dark">

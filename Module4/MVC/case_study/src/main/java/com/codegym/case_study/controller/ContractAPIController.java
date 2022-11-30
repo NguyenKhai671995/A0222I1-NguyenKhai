@@ -41,5 +41,10 @@ public class ContractAPIController {
         contractService.save(contract);
         return getListContract("");
     }
-
+    @PatchMapping("")
+    public Contract saveEdit(@Valid @RequestBody Contract contract ){
+        contract.setStatus(true);
+        contractService.save(contract);
+        return contract;
+    }
 }
