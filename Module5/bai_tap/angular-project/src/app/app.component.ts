@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {isLineBreak} from "codelyzer/angular/sourceMappingVisitor";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-project';
+ currentValue: number;
+
+  getValueByChild($event: number) {
+     this.currentValue = $event;
+
+  }
 }
