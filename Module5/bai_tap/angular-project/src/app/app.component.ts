@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {isLineBreak} from "codelyzer/angular/sourceMappingVisitor";
+import {isLineBreak} from 'codelyzer/angular/sourceMappingVisitor';
 
 @Component({
   selector: 'app-root',

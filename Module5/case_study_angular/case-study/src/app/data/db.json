@@ -1,0 +1,70 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "customerName": "Tuấn Lê",
+      "birthday": "1990/04/14",
+      "gender": "name",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": 4,
+      "address": "dien bien phu"
+    },
+    {
+      "id": 2,
+      "customerName": "dat",
+      "birthday": "1990/04/14",
+      "gender": "name",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": 3,
+      "address": "dien bien phu"
+    },
+    {
+      "id": 3,
+      "customerName": "EWQA",
+      "birthday": "2004/1/14",
+      "gender": "name",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": 2,
+      "address": "dien bien phu"
+    },
+    {
+      "id": 5,
+      "customerName": "asdasds",
+      "birthday": "2022-12-08",
+      "gender": "asdasd",
+      "idCard": "asdasd",
+      "phone": "1231231231",
+      "email": "cuquay76@yahoo.com",
+      "customerType": "1",
+      "address": ""
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "gold"
+    },
+    {
+      "id": 4,
+      "name": "silver"
+    },
+    {
+      "id": 5,
+      "name": "member"
+    }
+  ]
+}

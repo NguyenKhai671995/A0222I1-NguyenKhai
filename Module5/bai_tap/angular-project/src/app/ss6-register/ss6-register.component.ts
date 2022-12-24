@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {AbstractControl, FormControl, FormGroup, ValidationErrors, Validators} from "@angular/forms";
-import {Register} from "ts-node";
+import {Component, OnInit} from '@angular/core';
+import {AbstractControl, FormControl, FormGroup, ValidationErrors, Validators} from '@angular/forms';
+import {Register} from 'ts-node';
 
 @Component({
   selector: 'app-ss6-register',
@@ -9,20 +9,21 @@ import {Register} from "ts-node";
 })
 export class Ss6RegisterComponent implements OnInit {
   registerForm: FormGroup = new FormGroup({
-    email : new FormControl('',[Validators.required,Validators.email]),
-    password : new FormControl('',[Validators.required,Validators.minLength(6)]),
-    confirmPassword : new FormControl('',Validators.required),
-    country: new FormControl('', [Validators.required]),
-    age: new FormControl('', [this.regexAge]),
-    gender: new FormControl(''),
-    phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{10}$')])
-  },
-  this.comparePassword);
-  register : Register;
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      confirmPassword: new FormControl('', Validators.required),
+      country: new FormControl('', [Validators.required]),
+      age: new FormControl('', [this.regexAge]),
+      gender: new FormControl(''),
+      phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{10}$')])
+    },
+    this.comparePassword);
+  register: Register;
 
-   registerNew: Register[] = [];
+  registerNew: Register[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -44,14 +45,14 @@ export class Ss6RegisterComponent implements OnInit {
 
   regexAge(control: AbstractControl): ValidationErrors | null {
     const a = control.value;
-    let current = new Date().getFullYear();
-    let birthday = new Date(a).getFullYear();
-    let age = current - birthday;
+    const current = new Date().getFullYear();
+    const birthday = new Date(a).getFullYear();
+    const age = current - birthday;
     if (isNaN(age)) {
-      return {'ageFalse': true}
+      return {ageFalse: true};
     }
     if (age < 18) {
-      return {'ageFalse': true}
+      return {ageFalse: true};
     }
     return null;
   }
