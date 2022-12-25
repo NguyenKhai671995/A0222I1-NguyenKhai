@@ -15,8 +15,7 @@ import { EmployeeListComponent } from './component/employee/employee-list/employ
 import { EmployeeCreateComponent } from './component/employee/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './component/employee/employee-edit/employee-edit.component';
 import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
-import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
-import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
+import { FacilityUpdateComponent } from './component/facility/facility-update/facility-update.component';
 import { FacilityDetailComponent } from './component/facility/facility-detail/facility-detail.component';
 
 @NgModule({
@@ -32,8 +31,7 @@ import { FacilityDetailComponent } from './component/facility/facility-detail/fa
     EmployeeCreateComponent,
     EmployeeEditComponent,
     FacilityListComponent,
-    FacilityEditComponent,
-    FacilityCreateComponent,
+    FacilityUpdateComponent,
     FacilityDetailComponent
   ],
   imports: [

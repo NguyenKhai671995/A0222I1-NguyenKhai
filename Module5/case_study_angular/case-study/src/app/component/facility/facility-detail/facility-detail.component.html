@@ -3,7 +3,10 @@
   <h5>Area: {{facility.area}}</h5>
   <h5>Cost: {{facility.cost}}</h5>
   <h5>Max People: {{facility.maxPeople}}</h5>
-  <h5>Rent Type: {{facility.rentType.name}}</h5>
+
+  <h5 *ngFor="let item of types">
+    <span *ngIf="item.id == facility.rentType">RentType: {{item.name}}</span>
+  </h5>
 
   <h5 *ngIf="facility.standardRoom;else elseStandard">Room Standard: {{facility.standardRoom}}</h5>
   <ng-template #elseStandard><h5>Room Standard: XXX </h5></ng-template>
@@ -20,5 +23,5 @@
 
   <h5 *ngIf="facility.freeService;else elseService">Free Service: {{facility.freeService}}</h5>
   <ng-template #elseService><h5>Free Service: XXX </h5></ng-template>
-
+  <button [routerLink]="['/facility/facility-list']">Back list</button>
 </div>

@@ -32,39 +32,6 @@
       "email": "cumeo123@gmail.com",
       "customerType": 2,
       "address": "dien bien phu"
-    },
-    {
-      "id": 5,
-      "customerName": "asdasds",
-      "birthday": "2022-12-08",
-      "gender": "asdasd",
-      "idCard": "asdasd",
-      "phone": "1231231231",
-      "email": "cuquay76@yahoo.com",
-      "customerType": "1",
-      "address": ""
-    },
-    {
-      "id": 7,
-      "customerName": "asdasd",
-      "birthday": "2022-12-11",
-      "gender": "123",
-      "idCard": "123",
-      "phone": "123",
-      "email": "123",
-      "customerType": "1",
-      "address": ""
-    },
-    {
-      "id": 8,
-      "customerName": "asdsadsad",
-      "birthday": "2022-12-24",
-      "gender": "1",
-      "idCard": "12",
-      "phone": "3",
-      "email": "444",
-      "customerType": "4",
-      "address": ""
     }
   ],
   "customerType": [
@@ -117,32 +84,34 @@
       "division": "3"
     }
   ],
-  "facility":[
+  "facility": [
     {
       "id": 1,
-      "nameService": "Villa super Vip I",
+      "nameService": "Villa super Vip 11",
       "area": 200,
       "cost": 10,
       "maxPeople": 5,
       "standardRoom": "Vip",
       "descriptionOtherConvenience": "vip",
-      "areaPool": 2000,
+      "areaPool": 200,
       "numberOfFloors": 2,
+      "freeService": null,
       "rentType": 1,
       "facilityType": 1
-  },
+    },
     {
-      "id":2,
-      "nameService": "Villa super Vip I",
-      "area": 322,
-      "cost": 12,
-      "maxPeople": 15,
-      "standardRoom": "Vip",
-      "descriptionOtherConvenience": "vip",
-      "areaPool": 32000,
-      "numberOfFloors": 12,
-      "rentType": 4,
-      "facilityType": 2
+      "id": 3,
+      "nameService": "Vui Lam",
+      "area": 14124,
+      "cost": 1213,
+      "maxPeople": "123",
+      "standardRoom": "aowffjajf",
+      "descriptionOtherConvenience": "125125",
+      "areaPool": 125125,
+      "numberOfFloors": 12313,
+      "freeService": "512",
+      "rentType": "1",
+      "facilityType": "2"
     }
   ]
 }

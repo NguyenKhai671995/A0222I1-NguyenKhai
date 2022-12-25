@@ -9,6 +9,7 @@ import {EmployeeCreateComponent} from "./component/employee/employee-create/empl
 import {EmployeeEditComponent} from "./component/employee/employee-edit/employee-edit.component";
 import {FacilityListComponent} from "./component/facility/facility-list/facility-list.component";
 import {FacilityDetailComponent} from "./component/facility/facility-detail/facility-detail.component";
+import {FacilityUpdateComponent} from "./component/facility/facility-update/facility-update.component";
 
 
 const routes: Routes = [
@@ -39,6 +40,10 @@ const routes: Routes = [
     path: "facility/facility-list",component: FacilityListComponent
   },{
     path: "facility/facility-detail/:id",component: FacilityDetailComponent
+  },{
+    path: "facility/facility-update",component: FacilityUpdateComponent
+  },{
+    path: "facility/facility-edit/:id",component: FacilityUpdateComponent
   }
 
 

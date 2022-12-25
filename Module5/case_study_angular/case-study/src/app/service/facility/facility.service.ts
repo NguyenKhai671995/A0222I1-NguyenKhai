@@ -15,14 +15,13 @@ export class FacilityService {
   findALl(): Observable<Facility[]>{
     return this.http.get<Facility[]>(`${this.url}`);
   }
-  save(facility: Facility):Observable<Facility[]> {
-    // @ts-ignore
-    return this.http.post(this.url,facility);
+  save(facility: Facility):Observable<Facility> {
+    if(facility.id == null)    return this.http.post(this.url,facility);
+    return this.http.put(`${this.url}/${facility.id}`,facility);
   }
 
   deleteById(id: number): Observable<Facility> {
-    // @ts-ignore
-    return this.http.delete(`${this.url}/${id}`)
+     return this.http.delete(`${this.url}/${id}`)
   }
   findById(id:number){
     return this.http.get<Facility>(`${this.url}/${id}`)
