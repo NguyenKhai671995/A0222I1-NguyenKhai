@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
-import {CustomerType} from "../model/Customer-type";
+import {CustomerType} from "../../model/customer/Customer-type";
 import {HttpClient} from "@angular/common/http";
 
 
@@ -20,6 +20,8 @@ export class CustomerTypeService {
   findAll(): CustomerType[] {
     return this.customerTypeis;
   }
+
+
 
 
 }

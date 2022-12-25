@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
-import {Customer} from "../model/Customer";
+import {Customer} from "../../model/customer/Customer";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
@@ -24,13 +24,14 @@ export class CustomerServiceService {
 
   save(customer: Customer): Observable<Customer> {
     // @ts-ignore
-    return this.http.post(this.url,customer);
+    return this.http.post(this.url, customer);
   }
+
   findById(id: number) {
     return this.http.get<Customer>(`${this.url}/${id}`);
   }
 
   updateById(value: Customer) {
-    return this.http.put<Customer>(`${this.url}/${value.id}`,value);
+    return this.http.put<Customer>(`${this.url}/${value.id}`, value);
   }
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer} from "../../../model/Customer";
-import {CustomerType} from "../../../model/Customer-type";
-import {CustomerServiceService} from "../../../service/customer-service.service";
-import {CustomerTypeService} from "../../../service/customer-type.service";
+import {Customer} from "../../../model/customer/Customer";
+import {CustomerType} from "../../../model/customer/Customer-type";
+import {CustomerServiceService} from "../../../service/customer/customer-service.service";
+import {CustomerTypeService} from "../../../service/customer/customer-type.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
@@ -29,14 +29,16 @@ export class CustomerEditComponent implements OnInit {
       const id = +(data.get('id'));
       this.customerService.findById(id).subscribe(value => {
         this.customerSelect = value;
+        console.log(this.customerSelect)
         this.buildEditForm();
       })
     })
   }
+
   buildEditForm(){
     this.customerFormEdit = new FormGroup(
       {
-        id : new FormControl(),
+        id : new FormControl(this.customerSelect.id),
         customerName : new FormControl(this.customerSelect.customerName),
         birthday : new FormControl(this.customerSelect.birthday),
         gender : new FormControl(this.customerSelect.gender),
@@ -52,8 +54,8 @@ export class CustomerEditComponent implements OnInit {
 
   saveEdit(){
     // @ts-ignore
-    this.customerService.updateById(this.customerFormEdit().value).subscribe(data => {
-        this.route.navigateByUrl('customer-list').then(result => {
+    this.customerService.updateById(this.customerFormEdit.value).subscribe(data => {
+        this.route.navigateByUrl('/customer/customer-list').then(result => {
           this.customerFormEdit.reset();
           // @ts-ignore
           this.customerSelect = {};

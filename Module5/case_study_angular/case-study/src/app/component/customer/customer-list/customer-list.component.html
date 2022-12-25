@@ -1,4 +1,4 @@
-<table class="table table-bordered">
+<table class="table table-info">
   <tr>
     <td>STT</td>
     <th>Name</th>
@@ -20,7 +20,11 @@
     <td>{{customer.phone}}</td>
     <td>{{customer.email}}</td>
     <td>{{customer.address}}</td>
-    <td>{{customer.customerType}}</td>
+    <td>
+      <span *ngFor="let check of customerTypes">
+        <span *ngIf="check.id == customer.customerType">{{check.name}}</span>
+      </span>
+    </td>
     <td>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="wantDeleteIt(customer)">
         delete
@@ -48,6 +52,6 @@
     </div>
   </div>
 </div>
-<button routerLink="/customer-create">
+<button routerLink="/customer/customer-create">
   Create
 </button>

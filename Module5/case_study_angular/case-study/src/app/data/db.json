@@ -43,6 +43,28 @@
       "email": "cuquay76@yahoo.com",
       "customerType": "1",
       "address": ""
+    },
+    {
+      "id": 7,
+      "customerName": "asdasd",
+      "birthday": "2022-12-11",
+      "gender": "123",
+      "idCard": "123",
+      "phone": "123",
+      "email": "123",
+      "customerType": "1",
+      "address": ""
+    },
+    {
+      "id": 8,
+      "customerName": "asdsadsad",
+      "birthday": "2022-12-24",
+      "gender": "1",
+      "idCard": "12",
+      "phone": "3",
+      "email": "444",
+      "customerType": "4",
+      "address": ""
     }
   ],
   "customerType": [
@@ -65,6 +87,62 @@
     {
       "id": 5,
       "name": "member"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Tuan",
+      "birthday": "1995-10-05",
+      "idCard": "12312398980",
+      "salary": "123",
+      "phoneNumber": "0905872269",
+      "email": "giothoitb7@yahoo.com",
+      "address": "K69/8 Lý Thái Tổ ",
+      "positionEmployee": 1,
+      "education": 2,
+      "division": "2"
+    },
+    {
+      "id": 2,
+      "name": "asd",
+      "birthday": "2022-12-16",
+      "idCard": "asd",
+      "salary": "322",
+      "phoneNumber": "4531233363",
+      "email": "taikuto@gmail.com",
+      "address": "asdsad",
+      "positionEmployee": "1",
+      "education": "2",
+      "division": "3"
+    }
+  ],
+  "facility":[
+    {
+      "id": 1,
+      "nameService": "Villa super Vip I",
+      "area": 200,
+      "cost": 10,
+      "maxPeople": 5,
+      "standardRoom": "Vip",
+      "descriptionOtherConvenience": "vip",
+      "areaPool": 2000,
+      "numberOfFloors": 2,
+      "rentType": 1,
+      "facilityType": 1
+  },
+    {
+      "id":2,
+      "nameService": "Villa super Vip I",
+      "area": 322,
+      "cost": 12,
+      "maxPeople": 15,
+      "standardRoom": "Vip",
+      "descriptionOtherConvenience": "vip",
+      "areaPool": 32000,
+      "numberOfFloors": 12,
+      "rentType": 4,
+      "facilityType": 2
     }
   ]
 }

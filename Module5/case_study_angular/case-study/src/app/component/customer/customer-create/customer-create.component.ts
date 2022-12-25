@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {CustomerType} from "../../../model/Customer-type";
+import {CustomerType} from "../../../model/customer/Customer-type";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {CustomerServiceService} from "../../../service/customer-service.service";
-import {CustomerTypeService} from "../../../service/customer-type.service";
+import {CustomerServiceService} from "../../../service/customer/customer-service.service";
+import {CustomerTypeService} from "../../../service/customer/customer-type.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -40,7 +40,7 @@ export class CustomerCreateComponent implements OnInit {
   saveCreate() {
     console.log();
     this.customerService.save(this.formUpdate.value).subscribe(value => {
-      this.route.navigateByUrl('customer-list').then(result => {
+      this.route.navigateByUrl('/customer/customer-list').then(result => {
         this.formUpdate.reset();
       })
     })
