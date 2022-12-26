@@ -45,6 +45,7 @@ export class FacilityListComponent implements OnInit {
   deleteThis(id: number) {
     this.facilityService.deleteById(id).subscribe(data => {
       this.facilitySelect = {};
+      alert("delete ok");
       document.getElementById("deleteModal").click();
       this.ngOnInit();
     })

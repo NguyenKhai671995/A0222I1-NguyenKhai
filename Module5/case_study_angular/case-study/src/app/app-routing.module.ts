@@ -16,6 +16,7 @@ const routes: Routes = [
   {
     path: "", component: HomeComponent
   },
+  //Customer
   {
     path: "customer/customer-list", component: CustomerListComponent
   },
@@ -26,6 +27,7 @@ const routes: Routes = [
     path: "customer/customer-edit/:id",component: CustomerEditComponent
 
   },
+  //Employee
   {
     path: "employee/employee-list",component: EmployeeListComponent
 
@@ -36,6 +38,7 @@ const routes: Routes = [
   {
     path: "employee/employee-edit/:id",component: EmployeeEditComponent
   },
+  //facility
   {
     path: "facility/facility-list",component: FacilityListComponent
   },{

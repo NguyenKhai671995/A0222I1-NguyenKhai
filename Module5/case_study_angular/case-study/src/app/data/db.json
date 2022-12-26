@@ -24,14 +24,14 @@
     },
     {
       "id": 3,
-      "customerName": "EWQA",
-      "birthday": "2004/1/14",
-      "gender": "name",
+      "customerName": "asd",
+      "birthday": "2022-12-17",
+      "gender": "asd",
       "idCard": "asd",
-      "phone": "0766754226",
-      "email": "cumeo123@gmail.com",
-      "customerType": 2,
-      "address": "dien bien phu"
+      "phone": "asd",
+      "email": "sd",
+      "customerType": 1,
+      "address": "da nang"
     }
   ],
   "customerType": [
@@ -98,20 +98,6 @@
       "freeService": null,
       "rentType": 1,
       "facilityType": 1
-    },
-    {
-      "id": 3,
-      "nameService": "Vui Lam",
-      "area": 14124,
-      "cost": 1213,
-      "maxPeople": "123",
-      "standardRoom": "aowffjajf",
-      "descriptionOtherConvenience": "125125",
-      "areaPool": 125125,
-      "numberOfFloors": 12313,
-      "freeService": "512",
-      "rentType": "1",
-      "facilityType": "2"
     }
   ]
 }
