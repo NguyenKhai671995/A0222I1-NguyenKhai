@@ -1,0 +1,22 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "dateOfBirth": "1994-12-12",
+      "email": "asd",
+      "phone": "0213",
+      "manufacture": "apple",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "",
+      "dateOfBirth": "",
+      "email": "",
+      "phone": "",
+      "manufacture": "",
+      "category": "1"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <h3>Danh Sach San Pham</h3>
+    <form class="d-flex" [formGroup]="formSearch" (ngSubmit)="findByNameAndCategory()">
+      <input  class="form-control me-2" type="search" placeholder="Name Search" aria-label="Search" name="name" formControlName="name">
+      <select name="category" formControlName="category_id">
+        <option value="" selected>Category Search</option>
+        <option *ngFor="let i of categorys" value="{{i.id}}">
+          {{i.name}}
+        </option>
+      </select>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+      <button class="btn btn-outline-success" (click)="loadPage('','')">
+        reset
+      </button>
+    </form>
+  </div>
+</nav>
+
+
+<table class="table table-success">
+  <thead>
+  <tr>
+    <td>STT</td>
+    <td>name</td>
+    <td>dateOfBirth</td>
+    <td>email</td>
+    <td>phone</td>
+    <td>manufacture</td>
+    <td>category</td>
+    <td>Action</td>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let product of products  | paginate: config ; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.dateOfBirth}}</td>
+    <td>{{product.email}}</td>
+    <td>{{product.phone}}</td>
+    <td>{{product.manufacture}}</td>
+    <td>
+      <ng-container *ngFor="let check of categorys">
+        <div *ngIf="check.id == product.id">
+          <span>{{check.name}}</span>
+        </div>
+      </ng-container>
+
+    </td>
+
+    <td>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="wantDeleteIt(product)">
+        delete
+      </button>
+      <button class="btn btn-outline-success" [routerLink]="['edit',product.id]">edit</button>
+    </td>
+
+  </tr>
+  </tbody>
+
+
+</table>
+<pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trang trước" nextLabel="Trang sau"></pagination-controls>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        delete this {{produceSelect.name}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="deleteThis(produceSelect.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-outline-success" routerLink="/create">
+  Create
+</button>
