@@ -11,7 +11,6 @@ import {CustomerType} from "../../../model/customer/Customer-type";
 })
 export class CustomerListComponent implements OnInit {
   customers: Customer[] = [];
-  // @ts-ignore
   customerSelect : Customer = {};
   customerTypes : CustomerType[] = [];
 
@@ -34,11 +33,9 @@ export class CustomerListComponent implements OnInit {
 
   deleteThis(id: number) {
     this.customerService.deleteById(id).subscribe(value => {
-      // @ts-ignore
       this.customerSelect = {};
       document.getElementById("deleteModal").click();
       this.ngOnInit();
-
     })
   }
 

@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {Product} from "../../../model/Product";
-import {Category} from "../../../model/Category";
-import {ProductService} from "../../../service/product.service";
-import {CategoryService} from "../../../service/category.service";
+import {Product} from "../../../model/product/Product";
+import {Category} from "../../../model/product/Category";
+import {ProductService} from "../../../service/productservice/product.service";
+import {CategoryService} from "../../../service/productservice/category.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -15,6 +15,8 @@ export class ProductEditComponent implements OnInit {
   productFormEdit: FormGroup;
   productSelect: Product = {};
   categorys: Category[] = [];
+  message: boolean = false;
+
   constructor(private productService: ProductService,
               private activatedRoute: ActivatedRoute,
               private router: Router,
@@ -33,6 +35,7 @@ export class ProductEditComponent implements OnInit {
       })
     })
   }
+
   buildForm() {
     this.productFormEdit = new FormGroup({
       id: new FormControl(this.productSelect.id),
@@ -44,14 +47,18 @@ export class ProductEditComponent implements OnInit {
       category: new FormControl(this.productSelect.category),
     })
   }
+
   saveEdit() {
     this.productService.updateById(this.productFormEdit.value).subscribe(value => {
-      this.router.navigateByUrl("").then(result => {
-        this.productFormEdit.reset();
-        this.productSelect = {};
-      })
+      this.message = true;
     });
   }
 
 
+  removeMessage() {
+    this.router.navigateByUrl("").then(result => {
+      this.productFormEdit.reset();
+      this.productSelect = {};
+    })
+  }
 }

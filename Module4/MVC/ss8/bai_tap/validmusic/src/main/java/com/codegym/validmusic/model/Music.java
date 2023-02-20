@@ -19,20 +19,20 @@ public class Music {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-        @NotBlank(message = "not exits")
-    @Size(max = 800,message = "max size 800")
+    @NotBlank(message = "not exits")
+    @Size(max = 800, message = "max size 800")
 //    @Pattern(regexp = "[^&+,:;=?@#|'<>.-^*()%!]")
-        @Pattern(regexp = "^[a-zA-Z0-9 ]+$")
+    @Pattern(regexp = "^[a-zA-Z0-9 ]+$")
     private String name;
 
-        @NotBlank(message = "not empty")
-    @Size(max = 300,message = "max size 300")
+    @NotBlank(message = "not empty")
+    @Size(max = 300, message = "max size 300")
 //    @Pattern(regexp = "[^&+:;=?@#|'<>.-^*()%!]")
-        @Pattern(regexp = "^[a-zA-Z0-9, ]+$")
+    @Pattern(regexp = "^[a-zA-Z0-9, ]+$")
     private String singer;
     private String link;
 
-//    @NotBlank(message = "not null")
+    //    @NotBlank(message = "not null")
 //    @FutureOrPresent
     private Date date;
 

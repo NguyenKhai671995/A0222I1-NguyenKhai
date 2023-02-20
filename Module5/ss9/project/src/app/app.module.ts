@@ -8,13 +8,24 @@ import { ProductListComponent } from './component/product/product-list/product-l
 import { ProductCreateComponent } from './component/product/product-create/product-create.component';
 import { ProductEditComponent } from './component/product/product-edit/product-edit.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FinalListComponent } from './component/finalmodule/final-list/final-list.component';
+import { FinalCreateComponent } from './component/finalmodule/final-create/final-create.component';
+import { FinalEditComponent } from './component/finalmodule/final-edit/final-edit.component';
+import { Final2ListComponent } from './component/final2/final2-list/final2-list.component';
+import { Final2EditComponent } from './component/final2/final2-edit/final2-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductCreateComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    FinalListComponent,
+    FinalCreateComponent,
+    FinalEditComponent,
+    Final2ListComponent,
+    Final2EditComponent,
+
   ],
   imports: [
     BrowserModule,

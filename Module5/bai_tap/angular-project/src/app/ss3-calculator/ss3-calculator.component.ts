@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ss3-calculator',
@@ -7,36 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ss3CalculatorComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
+
   result = '0';
 
   currvalue = '';
 
 
-  writetoinput(value:string){
-    if (this.currvalue == '0'){
+  writetoinput(value: string) {
+    if (this.currvalue == '0') {
       this.currvalue = value;
     }
-    if (this.currvalue != '0'){
+    if (this.currvalue != '0') {
       this.currvalue += value;
     }
-    this.result = this.currvalue ;
-  }
-  equals(){
-    this.result = eval(this.result)
-    this.currvalue = this.result
+    this.result = this.currvalue;
   }
 
-  delete(){
+  equals() {
+    this.result = eval(this.result);
+    this.currvalue = this.result;
+  }
+
+  delete() {
     this.currvalue = "";
     this.result = '0';
   }
 
-  backone(){
-    this.result = this.result.substr(0,this.result.length-1);
+  backone() {
+    this.result = this.result.substr(0, this.result.length - 1);
     this.currvalue = this.result;
   }
 }

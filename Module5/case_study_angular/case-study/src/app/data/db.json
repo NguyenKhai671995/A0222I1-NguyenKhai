@@ -95,9 +95,23 @@
       "descriptionOtherConvenience": "vip",
       "areaPool": 200,
       "numberOfFloors": 2,
-      "freeService": null,
+      "freeService": "ssssss",
       "rentType": 1,
       "facilityType": 1
+    },
+    {
+      "id": 2,
+      "nameService": "ádasd",
+      "area": 123,
+      "cost": 123,
+      "maxPeople": "12312",
+      "standardRoom": "zxxzczxc",
+      "descriptionOtherConvenience": "ccccccccc",
+      "areaPool": 123,
+      "numberOfFloors": 12,
+      "freeService": "zxczxcxzc",
+      "rentType": "1",
+      "facilityType": "2"
     }
   ]
 }

@@ -15,5 +15,4 @@ export interface Facility {
   freeService?: string;
   rentType?: RentType;
   facilityType?: FacilityType;
-
 }

@@ -17,6 +17,7 @@ import { EmployeeEditComponent } from './component/employee/employee-edit/employ
 import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
 import { FacilityUpdateComponent } from './component/facility/facility-update/facility-update.component';
 import { FacilityDetailComponent } from './component/facility/facility-detail/facility-detail.component';
+import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FacilityDetailComponent } from './component/facility/facility-detail/fa
     EmployeeEditComponent,
     FacilityListComponent,
     FacilityUpdateComponent,
-    FacilityDetailComponent
+    FacilityDetailComponent,
+    ContractListComponent
   ],
   imports: [
     BrowserModule,

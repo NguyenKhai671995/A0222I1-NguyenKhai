@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {Product} from "../../../model/Product";
-import {Category} from "../../../model/Category";
+import {Component, OnInit} from '@angular/core';
+import {Product} from "../../../model/product/Product";
+import {Category} from "../../../model/product/Category";
 import {FormControl, FormGroup} from "@angular/forms";
-import {ProductService} from "../../../service/product.service";
+import {ProductService} from "../../../service/productservice/product.service";
 import {Router} from "@angular/router";
-import {CategoryService} from "../../../service/category.service";
+import {CategoryService} from "../../../service/productservice/category.service";
 
 @Component({
   selector: 'app-product-list',
@@ -14,9 +14,10 @@ import {CategoryService} from "../../../service/category.service";
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
   categorys: Category[] = [];
-  produceSelect: Product= {};
+  produceSelect: Product = {};
   formSearch: FormGroup;
   config: any;
+  message: boolean = false;
 
   constructor(private productService: ProductService,
               private route: Router,
@@ -25,22 +26,32 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadPage('', '');
+    this.removeMessage();
     this.formSearch = new FormGroup({
       name: new FormControl(""),
       category_id: new FormControl("")
     });
   }
+
   loadPage(name: string, category: string) {
-    this.productService.findAllByNameAndCategory(name, category).subscribe(value => {
-      this.categorys = this.categoriesService.findAll();
-      this.products = value;
-      console.log(this.products)
-    });
     this.config = {
       itemsPerPage: 4,
       currentPage: 1,
       totalItems: this.products.length
     };
+
+    this.productService.findAllByNameAndCategory(name, category).subscribe(value => {
+      this.categorys = this.categoriesService.findAll();
+      this.products = value;
+      this.config = {
+        itemsPerPage: 4,
+        currentPage: 1,
+        totalItems: this.products.length
+      };
+
+    });
+
+
   }
 
   wantDeleteIt(product: Product) {
@@ -50,9 +61,9 @@ export class ProductListComponent implements OnInit {
   deleteThis(id: number) {
     this.productService.deleteById(id).subscribe(data => {
       this.produceSelect = {};
-      alert("delete ok");
       document.getElementById("deleteModal").click();
-      this.ngOnInit();
+      this.message = true;
+      this.loadPage('', '');
     })
   }
 
@@ -62,5 +73,14 @@ export class ProductListComponent implements OnInit {
 
   pageChanged(event: number) {
     this.config.currentPage = event;
+  }
+
+  removeMessage() {
+    this.message = false
+  }
+
+  resetPage() {
+    this.formSearch.reset();
+    this.ngOnInit();
   }
 }
