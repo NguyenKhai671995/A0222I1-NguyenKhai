@@ -18,6 +18,7 @@ import { FacilityListComponent } from './component/facility/facility-list/facili
 import { FacilityUpdateComponent } from './component/facility/facility-update/facility-update.component';
 import { FacilityDetailComponent } from './component/facility/facility-detail/facility-detail.component';
 import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
+import { ContractUpdateComponent } from './component/contract/contract-update/contract-update.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContractListComponent } from './component/contract/contract-list/contra
     FacilityListComponent,
     FacilityUpdateComponent,
     FacilityDetailComponent,
-    ContractListComponent
+    ContractListComponent,
+    ContractUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -13,20 +13,20 @@ export class Ss3ColorpickerComponent implements OnInit {
   }
 
   public backgroundNew = '';
-  public colorNew = ''
-  changeColor(value:String){
+  public colorNew = '';
+  changeColor(value: string) {
     switch (value) {
-      case "primary":{
+      case "primary": {
         this.backgroundNew = "blue";
         this.colorNew = "white";
         break;
       }
-      case "Secondary":{
+      case "Secondary": {
         this.backgroundNew = "grey";
         this.colorNew = "blue";
         break;
       }
-      case "Success":{
+      case "Success": {
         this.backgroundNew = "green";
         this.colorNew = "black";
         break;

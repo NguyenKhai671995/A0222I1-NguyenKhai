@@ -39,7 +39,7 @@ export class CustomerEditComponent implements OnInit {
     this.customerFormEdit = new FormGroup(
       {
         id : new FormControl(this.customerSelect.id),
-        customerName : new FormControl(this.customerSelect.customerName),
+        customerName : new FormControl(this.customerSelect.customerName,[Validators.required]),
         birthday : new FormControl(this.customerSelect.birthday),
         gender : new FormControl(this.customerSelect.gender),
         idCard : new FormControl(this.customerSelect.idCard),
@@ -53,11 +53,9 @@ export class CustomerEditComponent implements OnInit {
   }
 
   saveEdit(){
-    // @ts-ignore
     this.customerService.updateById(this.customerFormEdit.value).subscribe(data => {
         this.route.navigateByUrl('/customer/customer-list').then(result => {
           this.customerFormEdit.reset();
-          // @ts-ignore
           this.customerSelect = {};
         })
     })

@@ -22,4 +22,7 @@ export class ProductService {
   findById(id: number) {
     return this.httpClient.get<Product>(`${this.URL}/${id}`);
   }
+  updateById(value: Product ) {
+    return this.httpClient.put<Product>(`${this.URL}/${value.id}`, value);
+  }
 }

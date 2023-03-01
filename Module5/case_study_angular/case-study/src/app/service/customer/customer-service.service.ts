@@ -17,13 +17,11 @@ export class CustomerServiceService {
   }
 
   deleteById(id: number): Observable<Customer> {
-    // @ts-ignore
     return this.http.delete(`${this.url}/${id}`)
   }
 
 
   save(customer: Customer): Observable<Customer> {
-    // @ts-ignore
     return this.http.post(this.url, customer);
   }
 

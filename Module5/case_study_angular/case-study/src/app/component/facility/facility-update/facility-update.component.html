@@ -13,10 +13,7 @@
             <span *ngIf="facilityEdit.id != null">
              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Edit Form</h3>
             </span>
-
-
             <form class="px-md-2" [formGroup]="formCreate" novalidate autocomplete="off" (ngSubmit)="saveData()">
-
               <div class="form-outline mb-4">
                 <input type="text" id="nameService" class="form-control" formControlName="nameService"
                        name="nameService"/>
@@ -25,14 +22,12 @@
                   <span style="color:red;"
                         *ngIf="(formCreate.controls.nameService.touched) && formCreate.controls.nameService.hasError('required') "> is Something!!! Input Something </span>
                 </label>
-
               </div>
               <div class="form-outline mb-4">
                 <input type="number" id="area" class="form-control" formControlName="area" name="area"/>
                 <label class="form-label"> Area
                   <span style="color:red;"
                         *ngIf="(formCreate.controls.area.touched) && formCreate.controls.area.hasError('min') "> min 1 </span>
-
                 </label>
               </div>
               <div class="form-outline mb-4">
@@ -41,7 +36,6 @@
                   cost
                   <span style="color:red;"
                         *ngIf="(formCreate.controls.cost.touched) && formCreate.controls.cost.hasError('required') "> is Something!!! choose your Id Card </span>
-
                 </label>
               </div>
               <div class="form-outline mb-4">
@@ -67,7 +61,6 @@
                 <label class="form-label">freeService</label>
                 <span style="color:red;"
                       *ngIf="(formCreate.controls.freeService.touched) && formCreate.controls.freeService.hasError('required') "> is something!!! input your email </span>
-
               </div>
               <div class="form-outline mb-4">
                 <input type="number" id="numberOfFloors" class="form-control" formControlName="numberOfFloors"
@@ -75,14 +68,12 @@
                 <label class="form-label">numberOfFloors</label>
                 <span style="color:red;"
                       *ngIf="(formCreate.controls.numberOfFloors.touched) && formCreate.controls.numberOfFloors.hasError('required') "> is something!!! input your email </span>
-
               </div>
               <div class="form-outline mb-4">
                 <input type="number" id="areaPool" class="areaPool" formControlName="areaPool" name="areaPool"/>
                 <label class="form-label">areaPool</label>
                 <span style="color:red;"
                       *ngIf="(formCreate.controls.areaPool.touched) && formCreate.controls.areaPool.hasError('required') "> is something!!! input your email </span>
-
               </div>
               <div class="form-outline mb-4">
                 <input type="text" id="descriptionOtherConvenience" class="form-control"
@@ -90,9 +81,7 @@
                 <label class="form-label">Email</label>
                 <span style="color:red;"
                       *ngIf="(formCreate.controls.descriptionOtherConvenience.touched) && formCreate.controls.descriptionOtherConvenience.hasError('required') "> is something!!! input your email </span>
-
               </div>
-
               <div class="form-outline mb-4">
                 <select formControlName="facilityType"
                         name="facilityType">
@@ -108,14 +97,11 @@
                 </select>
                 <label class="form-label">rentType</label>
               </div>
-
-
               <button type="submit" class="btn btn-success btn-lg mb-1" [disabled]="formCreate.invalid">Submit
               </button>
               <button type="button" class="btn btn-warning btn-lg mb-1" (click)="buildForm()">Reset</button>
               <button type="button" class="btn btn-warning btn-lg mb-1" routerLink="/facility/facility-list">back list
               </button>
-
             </form>
           </div>
         </div>

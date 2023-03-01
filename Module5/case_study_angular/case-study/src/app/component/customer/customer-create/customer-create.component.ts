@@ -16,7 +16,7 @@ export class CustomerCreateComponent implements OnInit {
 
   constructor(private customerService : CustomerServiceService,
               private customerTypeService : CustomerTypeService,
-              private route : Router) { }
+              private route : Router) {}
 
   ngOnInit(): void {
     this.customerTypes = this.customerTypeService.findAll();
@@ -30,8 +30,8 @@ export class CustomerCreateComponent implements OnInit {
         birthday : new FormControl('',[Validators.required]),
         gender : new FormControl('',[Validators.required]),
         idCard : new FormControl('',[Validators.required]),
-        phone : new FormControl('',[Validators.required,Validators.pattern("^([0-9]{9})$")]),
-        email : new FormControl('',[Validators.required,Validators.pattern("^[\\w\\-.]+@([\\w-]+\\.)+[\\w-]{2,4}$")]),
+        phone : new FormControl('',[Validators.required,Validators.pattern("^(\\+84|0)\\d{9}$")]),
+        email : new FormControl('',[Validators.required,Validators.pattern("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$")]),
         customerType : new FormControl('',[Validators.required]),
         address : new FormControl('',[Validators.required]),
       }

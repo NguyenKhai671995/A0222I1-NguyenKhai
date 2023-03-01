@@ -36,7 +36,7 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="wantDeleteIt(customer)">
           delete
         </button>
-        <button [routerLink]="['/customer/customer-edit',customer.id]">edit</button>
+        <button type="button" class="btn btn-danger" [routerLink]="['/customer/customer-edit',customer.id]">edit</button>
       </td>
 
     </tr>

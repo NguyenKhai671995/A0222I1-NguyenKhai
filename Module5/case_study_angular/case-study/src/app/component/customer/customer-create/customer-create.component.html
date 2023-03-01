@@ -28,7 +28,10 @@
                     <div class="form-outline flex-fill mb-0">
                       <input type="date" id="form3Example2c" class="form-control" formControlName="birthday"
                              name="birthday"/>
-                      <label class="form-label" for="form3Example1c">birthday</label>
+                      <label class="form-label" for="form3Example1c">birthday
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.birthday.touched) && formUpdate.controls.birthday.hasError('required') "> is something!!! input your birthday </span>
+                        </label>
                     </div>
                   </div>
                   <div class="d-flex flex-row align-items-center mb-4">
@@ -36,7 +39,10 @@
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" id="form3Example9c" class="form-control" formControlName="gender"
                              name="gender"/>
-                      <label class="form-label" for="form3Example3c">gender</label>
+                      <label class="form-label" for="form3Example3c">gender
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.gender.touched) && formUpdate.controls.gender.hasError('required') "> is something!!! input your gender </span>
+                      </label>
                     </div>
                   </div>
                   <div class="d-flex flex-row align-items-center mb-4">
@@ -44,7 +50,10 @@
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" id="form3Example8c" class="form-control" formControlName="idCard"
                              name="idCard"/>
-                      <label class="form-label" for="form3Example3c">idCard</label>
+                      <label class="form-label" for="form3Example3c">idCard
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.idCard.touched) && formUpdate.controls.idCard.hasError('required') "> is something!!! input your idCard </span>
+                      </label>
                     </div>
                   </div>
 
@@ -52,7 +61,13 @@
 
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" id="form3Example4c" class="form-control" formControlName="phone" name="phone"/>
-                      <label class="form-label" for="form3Example4c">phone</label>
+                      <label class="form-label" for="form3Example4c">phone
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.phone.touched) && formUpdate.controls.phone.hasError('required') "> is something!!! input your phone </span>
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.phone.touched) && formUpdate.controls.phone.hasError('pattern') "> error pattern </span>
+
+                      </label>
                     </div>
                   </div>
 
@@ -61,7 +76,12 @@
                     <div class="form-outline flex-fill mb-0">
                       <input type="email" id="form3Example3c" class="form-control" formControlName="email"
                              name="email"/>
-                      <label class="form-label" for="form3Example3c">Your Email</label>
+                      <label class="form-label" for="form3Example3c">Your Email
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.email.touched) && formUpdate.controls.email.hasError('required') "> is something!!! input your email </span>
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.email.touched) && formUpdate.controls.email.hasError('pattern') "> error pattern </span>
+                      </label>
                     </div>
                   </div>
 
@@ -89,8 +109,8 @@
                   </div>
 
                   <div class="d-flex btn-group justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg" >Register
-<!--                      [disabled]="formUpdate.invalid"-->
+                    <button type="submit" class="btn btn-primary btn-lg" [disabled]="formUpdate.invalid" >Register
+
                     </button>
 
                     <button type="button" class="btn btn-primary btn-lg" (click)="buildForm()">Refresh</button>

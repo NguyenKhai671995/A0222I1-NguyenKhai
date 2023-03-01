@@ -16,7 +16,7 @@ export class FacilityService {
     return this.http.get<Facility[]>(`${this.url}`);
   }
   save(facility: Facility):Observable<Facility> {
-    if(facility.id == null)    return this.http.post(this.url,facility);
+    if(facility.id == null)   return this.http.post(this.url,facility);
     return this.http.put(`${this.url}/${facility.id}`,facility);
   }
 

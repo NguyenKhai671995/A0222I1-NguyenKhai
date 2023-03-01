@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-ss3-calculator',
@@ -7,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class Ss3CalculatorComponent implements OnInit {
 
-  constructor() {
+  constructor(private route : Router) {
   }
 
   ngOnInit(): void {
